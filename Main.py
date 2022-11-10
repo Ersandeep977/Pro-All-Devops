@@ -27,8 +27,7 @@ def MainFun():
             JS.JenkinsInfo()
             os.system('clear')
         elif UserInput == 'B' or UserInput == 'b':
-            AWS.Ansible_M_Server()
-            print('b')
+            AWS.Aws_Serive()
             os.system('clear')
         elif UserInput == 'C' or UserInput == 'c':
             print('c')
