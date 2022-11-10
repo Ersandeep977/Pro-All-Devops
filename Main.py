@@ -38,7 +38,7 @@ while True:
         print('*'*80)
         exit()   
     else:
-        print('woring')
+        print('woring optin')
         os.system('clear')
 
 
