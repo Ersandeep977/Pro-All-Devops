@@ -1,3 +1,5 @@
+# Ec2 instance code
+```
 pipeline
 {
     agent any
@@ -21,3 +23,4 @@ pipeline
         }
     }
 }
+```
