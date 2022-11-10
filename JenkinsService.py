@@ -20,3 +20,6 @@ def JenkinsInfo():
     print('[2].Jenkins version ===>',version)
     print('[3].Total Number of the Jenkins job Running ===>',Total_Count)
     print('*'*80)
+    
+
+    

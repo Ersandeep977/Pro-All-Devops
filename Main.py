@@ -4,6 +4,7 @@
 import os
 from time import sleep
 import JenkinsService as JS
+import AwsService as AWS
 # os.system('ls')
 
 # main code started 
@@ -26,6 +27,7 @@ def MainFun():
             JS.JenkinsInfo()
             os.system('clear')
         elif UserInput == 'B' or UserInput == 'b':
+            AWS.Ansible_M_Server()
             print('b')
             os.system('clear')
         elif UserInput == 'C' or UserInput == 'c':
