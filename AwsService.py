@@ -14,8 +14,9 @@ def Aws_Serive():
                 [1] Press A ---> Ansible_M_Server
                 [2] Press B ---> Ansible_Node_A
                 [3] Press C ---> Ansible_Node_B
-                [4] Press D ---> All Ec2 Stop
-                If you Want Exit Press'(E/e)'
+                [4] Press D ---> All Ec2 Start
+                [5] Press E ---> All Ec2 Stop 
+                If you Want Exit Press'(N/n)'
                 ''')
         print('*'*80)
         UserInput = input('Choose Your option: ')
@@ -47,15 +48,24 @@ def Aws_Serive():
             os.system('clear')
 
         elif UserInput == 'D' or UserInput == 'd':
+            print(j.build_job("Start All EC2 Instances"))
+            print('Start All EC2 Instances..')
+            print('Pipeline Start ...')
+            time.sleep(2)
+            print('Plz Check.. jenkins dashboard')
+            input('Do you Want to Continue Press Enter..')  
+            os.system('clear')
+
+        elif UserInput == 'E' or UserInput == 'e':
             print(j.build_job("Stop All EC2 Instances"))
             print('Stop All EC2 Instances..')
             print('Pipeline Start ...')
             time.sleep(2)
             print('Plz Check.. jenkins dashboard')
             input('Do you Want to Continue Press Enter..')  
-            os.system('clear')  
+            os.system('clear')
 
-        elif UserInput == 'E' or UserInput == 'e':
+        elif UserInput == 'N' or UserInput == 'n':
             print('*'*80)
             print('*'*21,'Thank You For Using AWS Services Page..','*'*21)
             print('*'*80)
