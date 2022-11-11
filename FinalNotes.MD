@@ -48,11 +48,11 @@ pipeline
                 secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']])
                 {
                sh ''' 
-                echo "=================Ansible-m-server-Start================================"
+                echo "=================Ansible-m-server-Stop================================"
                 aws ec2 stop-instances --instance-ids i-06ca7c07761f468fd  --region us-east-2
-                echo "=================Ansible-m-Node-A-Start================================"
+                echo "=================Ansible-m-Node-A-Stop================================"
                 aws ec2 stop-instances --instance-ids i-0589b7c12d3ee6928 --region us-east-2
-                echo "==================Ansible-Node-B-Start================================="
+                echo "==================Ansible-Node-B-Stop================================="
                 aws ec2 stop-instances --instance-ids i-0569707a0704abbda --region us-east-2
                 echo "===================== All the EC2 instances Now Running================"
                 '''
