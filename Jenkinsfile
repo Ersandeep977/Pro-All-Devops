@@ -1,3 +1,4 @@
+// this file are start the all ec2 instances
 pipeline
 {
     agent any

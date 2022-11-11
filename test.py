@@ -1,1 +1,4 @@
-input('Do you Want to Continue Press Enter')
+import os
+
+
+os.system('notepad')
