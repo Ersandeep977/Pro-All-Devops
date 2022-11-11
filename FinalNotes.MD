@@ -5,7 +5,7 @@ pipeline
     agent any
     stages
     {
-        stage('tasting')
+        stage('Start All the EC2 Instances')
         {
             steps
             {
@@ -28,7 +28,7 @@ pipeline
             }
         }
     } 
-}    
+}       
 ```
 # Stop all the running instances 
 ```
@@ -37,7 +37,7 @@ pipeline
     agent any
     stages
     {
-        stage('tasting')
+        stage('Stop all the EC2 instances')
         {
             steps
             {
