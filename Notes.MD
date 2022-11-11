@@ -1,4 +1,4 @@
-# Ec2 instance code
+# Ec2 instance code pipeline code
 ```
 pipeline
 {
