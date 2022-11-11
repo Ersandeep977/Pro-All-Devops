@@ -77,3 +77,23 @@ pipeline
     }
 }
 ```
+## Pem key using pipeline
+```
+pipeline
+{
+    agent any
+    stages
+    {
+        stage('Aws Ec2 Running ')
+        {
+            steps
+            {
+            sshagent(['Aws-Jenkins-Pem-key']) 
+            {
+            sh "ssh  -o  StrictHostKeyChecking=no ec2-user@18.218.228.56 ls"
+            }
+            }
+        }
+    }
+}
+```
