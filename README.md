@@ -8,7 +8,7 @@
             If you Want Exit Press'(N/n)'
 ```
 ### Loging Page Show 
-![C](https://user-images.githubusercontent.com/78929192/201937179-bc72dc5d-b43b-4b56-a715-c0b491af51c0.PNG)
+![LogingPage](https://user-images.githubusercontent.com/78929192/201937179-bc72dc5d-b43b-4b56-a715-c0b491af51c0.PNG)
 ### Loing Page console output
 ```
 $ python Login.py
@@ -40,4 +40,6 @@ Choose Your option:
 
 ```
 ### Backend the Jenkins Job Are Running Show jenkins Dashboard
-![j](https://user-images.githubusercontent.com/78929192/201938622-2541045f-d4fa-46f1-bbb1-aca6c3a16cfb.PNG)
+![Jenkins](https://user-images.githubusercontent.com/78929192/201938622-2541045f-d4fa-46f1-bbb1-aca6c3a16cfb.PNG)
+
+
