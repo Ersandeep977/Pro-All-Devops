@@ -1,50 +1,46 @@
-// this file are start the all ec2 instances
+def VcredentialsId = "credentialsId: 'AWS-Jenkins-Ec2-Full-acess'"
+def VaccessKeyVariable = "accessKeyVariable: 'AWS_ACCESS_KEY_ID'"
+def VsecretKeyVariable = "secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'"
+
 pipeline
 {
     agent any
     stages
     {
-        stage('Ansible-m-server-Start')
+        stage('fast')
         {
             steps
             {
             withCredentials([[ 
-                $class: 'AmazonWebServicesCredentialsBinding', 
-                credentialsId: 'AWS-Jenkins-Ec2-Full-acess', 
-                accessKeyVariable: 'AWS_ACCESS_KEY_ID', 
-                secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']])
+                $class: 'AmazonWebServicesCredentialsBinding',
+                ${VcredentialsId},
+                ${VaccessKeyVariable},
+                ${VsecretKeyVariable} 
+                ]])
                 {
-               sh "aws ec2 start-instances --instance-ids i-06ca7c07761f468fd  --region us-east-2"
+               sh ''' 
+                echo "=================Ansible-m-server-Start================================"
+                aws ec2 start-instances --instance-ids i-06ca7c07761f468fd  --region us-east-2
+                '''
                 }
             }
         }
-        stage('Ansible-m-Node-A-Start')
-        {
-            steps
-            {
-            withCredentials([[ 
-                $class: 'AmazonWebServicesCredentialsBinding', 
-                credentialsId: 'AWS-Jenkins-Ec2-Full-acess', 
-                accessKeyVariable: 'AWS_ACCESS_KEY_ID', 
-                secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']])
-                {
-               sh "aws ec2 start-instances --instance-ids i-0589b7c12d3ee6928 --region us-east-2"
-                }
-            }
-        }
-        stage('Ansible-Node-B-Start')
-        {
-            steps
-            {
-            withCredentials([[ 
-                $class: 'AmazonWebServicesCredentialsBinding', 
-                credentialsId: 'AWS-Jenkins-Ec2-Full-acess', 
-                accessKeyVariable: 'AWS_ACCESS_KEY_ID', 
-                secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']])
-                {
-               sh "aws ec2 start-instances --instance-ids i-0569707a0704abbda --region us-east-2"
-                }
-            }
-        }
+       
+    } 
+}       
+
+
+// Define variable
+def myVariable = "foo"
+
+// Print variable
+pipeline {
+  agent any
+  stages {
+    stage ("Print variable") {
+      steps {
+        echo "My variable is ${myVariable}"
+      }
     }
+  }
 }

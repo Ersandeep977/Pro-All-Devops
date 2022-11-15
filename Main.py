@@ -19,7 +19,8 @@ def MainFun():
             [1] Press A ---> Jenkins Service
             [2] Press B ---> AWS Cloud Service
             [3] Press C ---> Ansible Service 
-            If you Want Exit Press'(E/e)'
+            [4] Press D ---> Prometheus Monitoring
+            If you Want Exit Press'(N/n)'
             ''')
         print('*'*80)
         UserInput = input('Choose Your option: ')
@@ -34,7 +35,7 @@ def MainFun():
             os.system('clear')
         elif UserInput == 'D' or UserInput == 'd':
             print('d')    
-        elif UserInput == 'E' or UserInput == 'e':
+        elif UserInput == 'N' or UserInput == 'n':
             print('*'*80)
             print('*'*21,'Thank You For Using Devops Program..','*'*21)
             print('*'*80)
