@@ -1,10 +1,10 @@
-# Ec2 instance code pipeline code
+# Some Notes key point in side the notes files
 ### some import link
 #### 1.Jenkins Pipeline
 https://cloudaffaire.com/jenkins-pipeline-part-2-stages-and-steps/
 #### 2. try Catch Block
 https://syntaxfix.com/question/1236/try-catch-block-in-jenkins-pipeline-script
-
+## Ec2 instance code pipeline code
 ```
 pipeline
 {
