@@ -1,4 +1,12 @@
 # Ec2 instance code pipeline code
+### some import link
+```
+1.Jenkins Pipeline
+https://cloudaffaire.com/jenkins-pipeline-part-2-stages-and-steps/
+
+2. try Catch Block
+https://syntaxfix.com/question/1236/try-catch-block-in-jenkins-pipeline-script
+```
 ```
 pipeline
 {
